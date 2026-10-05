@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jogo de Ping Pong</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="game-container">
+    <div id="score-board">
+      <div class="player-score">
+        <span class="player-label">Jogador 1 (W/S)</span>
+        <span id="score1">0</span>
+      </div>
+      <div id="deuce-indicator"></div>
+      <div class="player-score">
+        <span class="player-label">Jogador 2 (&uparrow;/&downarrow;)</span>
+        <span id="score2">0</span>
+      </div>
+    </div>
+
+    <canvas id="pongCanvas" width="800" height="400"></canvas>
+
+    <!-- Tela do Resultado (Vitória / Derrota / Empate) -->
+    <div id="overlay" class="hidden">
+      <div id="overlay-content">
+        <h2 id="result-message"></h2>
+        
+        <!-- Substitua 'sua-imagem.png' pelo caminho/URL da imagem desejada -->
+        <img id="result-image" src="images.jpeg" alt="Resultado do Jogo" />
+        
+        <p id="result-subtext"></p>
+        <button id="restart-btn" onclick="reiniciarJogo()">Jogar Novamente</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
